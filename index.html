@@ -151,7 +151,7 @@
 	    		</div>
 	    		<div class="book p-4">
 	    			<h3>Reservar una Mesa</h3>
-	    			<form action="#" class="appointment-form">
+	    			<form action="#" class="appointment-form" data-toggle="modal">
 	    				<div class="d-md-flex">
 		    				<div class="form-group">
 		    					<input type="text" class="form-control" placeholder="Primer Nombre">
@@ -174,7 +174,7 @@
 	            		</div>
 		    				</div>
 		    				<div class="form-group ml-md-4">
-		    					<input type="text" class="form-control" placeholder="WhatsApp">
+		    					<input type="text" class="form-control" placeholder="Cantidad">
 		    				</div>
 	    				</div>
 	    				<div class="d-md-flex">
@@ -182,14 +182,37 @@
 		              <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Mensaje"></textarea>
 		            </div>
 		            <div class="form-group ml-md-4">
-		              <input type="submit" value="Reservar!" class="btn btn-white py-3 px-4">
+		              <a href="#mimodal" role="button" type="submit" value="Reservar!" class="btn btn-white py-3 px-4" data-toggle="modal">Reservar!</a>                
 		            </div>
+
+                
+                  
+                </div>
 	    				</div>
 	    			</form>
-	    		</div>
+          </section>
+        <div class="modal fade" id="mimodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Esta Reservando</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Te Estamos Redireccionando a WhatsApp
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Aceptar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
     		</div>
     	</div>
-    </section>
+    
 
     <section class="ftco-about d-md-flex">
     	<div class="one-half img" style="background-image: url(images/about.jpg);"></div>
@@ -757,7 +780,7 @@
 		              <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Mensaje"></textarea>
 		            </div>
 		            <div class="form-group ml-md-4">
-		              <input type="submit" value="Reservar!" class="btn btn-primary py-3 px-4">
+		              <input type="submit" class="btn btn-primary py-3 px-4">
 		            </div>
 	    				</div>
 	    			</form>
